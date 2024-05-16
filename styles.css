@@ -1,5 +1,6 @@
 body {
-  color: whitesmoke;
+  color: black;
+  text-decoration-line: underline;
   background: radial-gradient(circle,dodgerblue, yellow);
   background-clip: text;
   animation: body 5s linear infinite;
