@@ -1,3 +1,5 @@
+let pokemonRepository = (function () {
+
 let pokemonList = [
     {
       name: "balbasaur",
@@ -16,12 +18,11 @@ let pokemonList = [
     }
 ]
 
-let pokemonRepository = (function () {
-  let pokemonList = [];
-
   function add(pokemon) {
-    pokemonList.push(pokemon);
-  }
+    if (typeof pokemon === 'object') {
+      pokemonList.push(pokemon);  
+  }  
+}
 
   function getAll() {
     return pokemonList;
@@ -33,7 +34,11 @@ let pokemonRepository = (function () {
   };
 })();
 
-pokemonList.forEach(pokemon => {
+pokemonRepository.add({
+  name: "Kakuna", height: 2.00, type: ['Bug', 'Poison']
+});
+
+const pokemonLoop = pokemonRepository.getAll().forEach((pokemon) => {
   if (pokemon.height<0.7 ) {
     document.write(pokemon.name + "a small pokemon" + "<br>");
   } else if (pokemon.height>0.9) {
@@ -42,3 +47,4 @@ pokemonList.forEach(pokemon => {
     document.write(pokemon.name + "a medium pokemon" + "<br>");
   }
 })
+
