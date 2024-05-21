@@ -33,6 +33,16 @@ function getAll() {
   return repository;
 }
 
+function addbuttonlistener(button, pokemon) {
+  window.addEventListener("click", () => {
+     showDetails(pokemon);
+    console.log("pokemon.name");
+  });
+//   button.addeventlistener('click', function () {
+//     this.style.backgroundColor = "red";
+// });
+}
+
 function addListItem(pokemon) {
   let pokemonList = document.querySelector(".pokemon-List");
   let listpokemon = document.createElement("li");
@@ -41,20 +51,14 @@ function addListItem(pokemon) {
   button.classList.add("button-class");
   listpokemon.appendChild(button);
   pokemonList.appendChild(listpokemon);
+  addbuttonlistener(button, pokemon);
   };
  
-  function addButtonListener(button, pokemon) {
-    button.addEventListener('click', function () { showDetails(pokemon) });
-  }
+function showDetails(pokemon) {
+  console.log (pokemon);
+}
 
-  //clicks then shows pokemon details
-  function showDetails(pokemon) {
-    loadDetails(pokemon).then(function () {
-      showDetails(pokemon.name.toUpperCase(), pokemon.height, pokemon.types);
-    });
-  }
-
-return {
+  return {
   add: add,
   getAll: getAll,
   addListItem: addListItem,
