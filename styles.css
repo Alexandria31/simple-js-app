@@ -36,5 +36,15 @@ body {
   background-color: white;
   color: black;
   border: 5px solid green;
+  
 }
 
+button:focus {
+  background-color: red;
+  color: white;
+}
+
+.h1 {
+  -webkit-text-stroke: 1px black;
+ text-align: center;
+}
