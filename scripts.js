@@ -34,7 +34,7 @@ function getAll() {
 }
 
 function addbuttonlistener(button, pokemon) {
-  window.addEventListener("click", () => {
+  button.addEventListener("click", () => {
      showDetails(pokemon);
     console.log("pokemon.name");
   });
