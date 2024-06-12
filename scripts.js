@@ -28,35 +28,55 @@ let pokemonRepository = (function () {
     });
   }
 
+  
   function loadList() {
+    showLoadingMessage();
     return fetch(apiUrl).then(function (response) {
       return response.json();
     }).then(function (json) {
+      hideLoadingMessage();
       json.results.forEach(function (item) {
         let pokemon = {
           name: item.name,
           detailsUrl: item.url
         };
         add(pokemon);
-        console.log(pokemon);
       });
     }).catch(function (e) {
       console.error(e);
+      hideLoadingMessage();
     })
   }
 
   function loadDetails(item) {
+    showLoadingMessage();
     let url = item.detailsUrl;
     return fetch(url).then(function (response) {
       return response.json();
     }).then(function (details) {
+      hideLoadingMessage();
       // Now we add the details to the item
       item.imageUrl = details.sprites.front_default;
       item.height = details.height;
       item.types = details.types;
     }).catch(function (e) {
       console.error(e);
+      hideLoadingMessage();
     });
+  }
+
+  function showLoadingMessage() {
+    let messageBlock = document.querySelector('.loading-status');
+    let message = document.createElement('p');
+    message.classList.add('status-message');
+    message.innerText = 'Loading ...';
+    messageBlock.append(message);
+  }
+
+  //Hides loading message from the page
+  function hideLoadingMessage() {
+    let message = document.querySelector('.status-message');
+    message.parentElement.removeChild(message);
   }
 
   function showDetails(item) {
