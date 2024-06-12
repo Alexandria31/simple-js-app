@@ -73,7 +73,6 @@ let pokemonRepository = (function () {
     messageBlock.append(message);
   }
 
-  //Hides loading message from the page
   function hideLoadingMessage() {
     let message = document.querySelector('.status-message');
     message.parentElement.removeChild(message);
