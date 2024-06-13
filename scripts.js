@@ -66,16 +66,17 @@ let pokemonRepository = (function () {
   }
 
   function showLoadingMessage() {
-    let messageBlock = document.querySelector('.loading-status');
-    let message = document.createElement('p');
-    message.classList.add('status-message');
-    message.innerText = 'Loading ...';
-    messageBlock.append(message);
+    let loadingWrapper = document.querySelector('.loading-wrapper');
+    loadingWrapper.classList.add("loading-on");
+    loadingWrapper.classList.remove('loading-off');
   }
 
   function hideLoadingMessage() {
-    let message = document.querySelector('.status-message');
-    message.parentElement.removeChild(message);
+    setTimeout(() => {
+      let loadingWrapper = document.querySelector('.loading-wrapper');
+      loadingWrapper.classList.remove('loading-on');
+      loadingWrapper.classList.add('loading-off');
+  }, 2000);
   }
 
   function showDetails(item) {
