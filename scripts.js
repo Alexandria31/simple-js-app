@@ -65,6 +65,11 @@ let pokemonRepository = (function () {
     });
   }
 
+  // function handleLoadingMessage() {
+  //   let loadingWrapper = document.querySelector('.loading-wrapper');
+  //   loadingWrapper.classList.toggle('loading-on');
+  // }
+
   function showLoadingMessage() {
     let loadingWrapper = document.querySelector('.loading-wrapper');
     loadingWrapper.classList.add("loading-on");
