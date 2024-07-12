@@ -1,42 +1,46 @@
 body {
-  color: black;
+  font-family: Arial, sans-serif;
   text-decoration-line: underline;
   background: radial-gradient(circle,dodgerblue, yellow);
   background-clip: text;
-  animation: body 5s linear infinite;
+  animation: body 2s linear infinite;
   background-size: 200% 200%;
 }
 
-@keyframes body {
-
-0% {
-  background-position: 0% 0%;
-}
-50% {
-  background-position: 100% 100%;
-}
-100% {
-  background-position: 0% 0%;
-}
+.h1 {
+  text-align: center;
 }
 
-.button-class {
+.loading-wrapper {
+  display: none; /* Hide initially */
+}
+
+.pokemon-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pokemon-list li {
+  margin: 10px;
+}
+
+.pokemon-button {
   background-color: green;
   border: none;
   color: white;
-  padding: 16px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  box-sizing: border-box;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
   cursor: pointer;
-  background-color: white;
-  color: black;
-  border: 5px solid green;
-  
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 
 button:focus {
@@ -44,72 +48,49 @@ button:focus {
   color: white;
 }
 
-.h1 {
-  -webkit-text-stroke: 1px black;
- text-align: center;
-}
-
-.circle-spin-2 {
-  --size: 24px;
-  --stroke-width: calc(var(--size) / 6);
-  --accent-opacity: .25;
-  --color: currentColor;
-  --animation-timing-function: linear;
-  --animation-duration: 1s;
-  position: relative;
-  width: var(--size);
-  height: var(--size);
-}
-
-.circle-spin-2::before,
-.circle-spin-2::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-width: var(--stroke-width);
-  border-style: solid;
-  border-radius: 50%;
-  transform: rotate(0deg);
-  animation: var(--animation-timing-function) var(--animation-duration) infinite circle-spin-2-animation;
-}
-
-.circle-spin-2::before {
-  border-color: var(--color) var(--color) var(--color) transparent;
-  opacity: var(--accent-opacity);
-}
-
-.circle-spin-2::after {
-  border-color: transparent transparent transparent var(--color);
-}
-
-@keyframes circle-spin-2-animation {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.loading-wrapper {
-  position: absolute;
+.modal-container {
+  display: none;
+  position: fixed;
   top: 0;
   left: 0;
-  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
-  background-color: rgba(255, 255, 255, 0.8);
-  z-index: 1000;
 }
 
-
-.loading-on {
-  display: flex;
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
 }
 
-.loading-off {
-  display: none;
+.modal-close {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.loader {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #3498db;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

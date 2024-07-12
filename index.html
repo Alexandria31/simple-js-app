@@ -11,22 +11,32 @@
     />
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
+
   <body>
     <h1 class="h1">
       <font color="#FF2626">P</font>
       <font color="#252A34">O</font>
       <font color="#753422">K</font>
-      <font color="#FFD523">E</font>
-      <font color="#71EFA3">D</font>
+      <font color="#8B8000">E</font>
+      <font color="#008B8B">D</font>
       <font color="#0F52BA">E</font>
-      <font color="#66CC66">X</font>
+      <font color="#006400">X</font>
     </h1>
     <div class="loading-wrapper">
       <div class="circle-spin-2"></div>
     </div>
     <ul class="pokemon-list"></ul>
+    <button id="show-modal">show modal</button>
+    <div id="modal-container" class="modal-container">
+      <div class="modal">
+        <button class="modal-close">close</button>
+        <h2>Hello there!</h2>
+        <div class="loader"></div>
+        <p>Welcome to the world of pokémon!</p>
+      </div>
+    </div>
     <script src="jspromise-polyfill.js"></script>
-    <script src="fetch-polyfill.js.js"></script>
+    <script src="fetch-polyfill.js"></script>
     <script src="scripts.js"></script>
   </body>
 </html>
