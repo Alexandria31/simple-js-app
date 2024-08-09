@@ -62,10 +62,18 @@ const pokemonRepository = (function () {
     const modalTitle = modalContainer.querySelector('h2');
     const modalText = modalContainer.querySelector('p');
     const modalLoader = modalContainer.querySelector('.loader');
-
-    // Display loader while fetching details
-    modalLoader.style.display = 'block';
-    modalText.style.display = 'none';
+   const modal = document.querySelector('.modal');
+  
+ // Display loader while fetching details
+    // modalLoader.style.display = 'block';
+    // modalText.style.display = 'none';
+   
+   modalTitle.innerText = '';
+   modalText.innerText = '';
+   const existingImage = modal.querySelector('img');
+   if (existingImage) {
+     existingImage.remove();
+   }
 
     loadDetails(pokemon).then(function () {
       modalTitle.innerText = pokemon.name;
@@ -74,15 +82,19 @@ const pokemonRepository = (function () {
       const modalImage = document.createElement('img');
       modalImage.src = pokemon.imageUrl;
       modalText.appendChild(modalImage);
-
-      // Hide loader and display details
+      // modal.appendChild(modalImage);
+      // modalTitle.appendChild(modalImage);
+      
+ // Hide loader and display details
       modalLoader.style.display = 'none';
-      modalText.style.display = 'block';
+      modalText.style.display = 'block'; 
+      modalImage.style.display = 'block';
     });
 
     modalContainer.style.display = 'flex';
   }
-return {
+
+ return {
     add: add,
     getAll: getAll,
     addListItem: addListItem,
