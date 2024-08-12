@@ -84,7 +84,7 @@ button:focus {
 }
 
 .loader {
-  position: absolute;
+  /* position: absolute; */
 /*   float: center; */
 /*   margin-left: 1%; */
   top: 50%;

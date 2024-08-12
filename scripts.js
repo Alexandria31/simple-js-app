@@ -64,9 +64,9 @@ const pokemonRepository = (function () {
     const modalLoader = modalContainer.querySelector('.loader');
    const modal = document.querySelector('.modal');
   
- // Display loader while fetching details
-    // modalLoader.style.display = 'block';
-    // modalText.style.display = 'none';
+// //  Display loader while fetching details
+//     modalLoader.style.display = 'block';
+//     modalText.style.display = 'none';
    
    modalTitle.innerText = '';
    modalText.innerText = '';
