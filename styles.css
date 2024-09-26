@@ -49,29 +49,32 @@ button:focus {
 }
 
 .modal-container {
-  display: none;
+  /* display: flex; */
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 50%;
+  left: 50%;
+  /* width: 50%;
+  margin: auto; */
+  /* height: 100%; */
+  /* background: rgba(0, 0, 0, 0.5); */
+  /* display: flex;
+  /* justify-content: center; */ 
+  /* align-items: center; */
 }
 
-.modal {
+.modal {  
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
-  width: 100%;
+  background: yellow;
+  padding: 80px;
+  /* border-radius: 100px;  */
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+  /* max-width: 500px; */
+  width: 50%;
+  height: 80%;
+  margin-left: 25%;
 /*   text-align: center; */
 }
 
@@ -87,7 +90,7 @@ button:focus {
   /* position: absolute; */
 /*   float: center; */
 /*   margin-left: 1%; */
-  top: 50%;
+  top: 20%;
 /*   margin: 0; */
   display: flex;
   justify-content: center;
