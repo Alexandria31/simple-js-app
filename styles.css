@@ -43,39 +43,38 @@ body {
   border-radius: 5px;
 }
 
+.navigation__logo img {
+  height: 50px;
+}
+
+
 button:focus {
   background-color: red;
   color: white;
 }
 
 .modal-container {
-  /* display: flex; */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  /* width: 50%;
-  margin: auto; */
-  /* height: 100%; */
-  /* background: rgba(0, 0, 0, 0.5); */
-  /* display: flex;
-  /* justify-content: center; */ 
-  /* align-items: center; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .modal {  
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background: yellow;
   padding: 80px;
-  /* border-radius: 100px;  */
-  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
-  /* max-width: 500px; */
   width: 50%;
-  height: 80%;
-  margin-left: 25%;
-/*   text-align: center; */
+  height: 75%;
 }
 
 .modal-close {
@@ -85,26 +84,27 @@ button:focus {
   padding: 5px 10px;
   cursor: pointer;
 }
-
+/* 
 .loader {
   /* position: absolute; */
 /*   float: center; */
 /*   margin-left: 1%; */
-  top: 1%;
+  /* top: 1%; */
 /*   margin: 0; */
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 100px;
+  height: 109px;
   width: 100px;
+  aspect-ratio: auto;
   background: linear-gradient(to bottom, rgb(254, 0, 1) 50%, white 50% );
   border-radius: 50%;
   border: 8px solid black;
   animation: spin 1s linear infinite;
-}
+} */
 
-.loader::before {
+/* .loader::before {
   content: '';
   position: absolute;
   height: 8px;
@@ -129,11 +129,24 @@ button:focus {
 }
 
 /* Spin Animation */
-@keyframes spin {
+/* @keyframes spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+}  */ 
+
+/* .topnav {
+  overflow: hidden;
+} */
+
+.topnav a {
+  float: left;
+  /* color: blue; */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
