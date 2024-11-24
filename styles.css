@@ -1,152 +1,72 @@
+/* General Body Styles */
 body {
-  font-family: Arial, sans-serif;
-  text-decoration-line: underline;
-  background: radial-gradient(circle,dodgerblue, yellow);
-  background-clip: text;
-  animation: body 2s linear infinite;
-  background-size: 200% 200%;
-}
-
-.h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle, dodgerblue, yellow);
+  color: #333;
+  }
+  
+  /* Top Navigation Styles */
+  .topnav {
+  margin-bottom: 20px;
+  }
+  
+  /* Main Heading Styles */
+  h1 {
   text-align: center;
-}
-
-.loading-wrapper {
-  display: none; /* Hide initially */
-}
-
-.pokemon-list {
-  list-style: none;
-  padding: 0;
+  color: #FF2626;
+  margin-bottom: 20px;
+  }
+  
+  /* Pokémon List Styles */
+  .pokemon-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.pokemon-list li {
-  margin: 10px;
-}
-
-.pokemon-button {
-  background-color: green;
-  border: none;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  box-sizing: border-box;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  padding: 10px 20px;
-  border-radius: 5px;
-}
-
-.navigation__logo img {
-  height: 50px;
-}
-
-
-button:focus {
-  background-color: red;
-  color: white;
-}
-
-.modal-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.modal {  
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  background: yellow;
-  padding: 80px;
-  width: 50%;
-  height: 75%;
-}
-
-.modal-close {
-  background: red;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-/* 
-.loader {
-  /* position: absolute; */
-/*   float: center; */
-/*   margin-left: 1%; */
-  /* top: 1%; */
-/*   margin: 0; */
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 109px;
-  width: 100px;
-  aspect-ratio: auto;
-  background: linear-gradient(to bottom, rgb(254, 0, 1) 50%, white 50% );
-  border-radius: 50%;
-  border: 8px solid black;
-  animation: spin 1s linear infinite;
-} */
-
-/* .loader::before {
-  content: '';
-  position: absolute;
-  height: 8px;
-  width: 100px;
-  background: black;
-  top: 50px;
-  transform: translatey(-50%);
-}
-
-.loader::after {
-  content: '';
-  position: absolute;
-  height: 38px;
-  width: 38px;
-  border-radius: 50%;
-  background: white;
-  top: 50px;
-  left: 50px;
-  transform: translate(-50%, -50%);
-  box-shadow: inset 0 0 0 8px black, inset 0 0 0 10px white, inset 0 0 0 12px black;
-
-}
-
-/* Spin Animation */
-/* @keyframes spin {
-  from {
-    transform: rotate(0deg);
+  align-items: stretch;
   }
-  to {
-    transform: rotate(360deg);
+  
+  /* List Item Styles */
+  .list-group-item {
+  margin-bottom: 10px;
   }
-}  */ 
+  
+  /* Button Styles */
+  .btn {
+  width: 100%; /* Full width for buttons */
+  }
 
-/* .topnav {
-  overflow: hidden;
-} */
+  .btn {
+    width: 100%; /* Full width for buttons */
+    background-color: #28a745; /* Green color */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+    }
+    
+    .btn:hover {
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    }
+    
+    
+  
+  /* Modal Styles */
+  .modal-content {
+  padding: 20px;
+  }
+  
+  .pokemon-image {
+  display: block; /* Center the image */
+  margin: 0 auto; /* Center the image */
+  max-width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Additional Text Styles in Modal */
+  .pokemon-height, .pokemon-weight, .pokemon-types {
+  margin-top: 10px;
+  font-size: 1.2em; 
+  }
+  
 
-.topnav a {
-  float: left;
-  /* color: blue; */
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
+

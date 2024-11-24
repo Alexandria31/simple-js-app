@@ -59,66 +59,575 @@
           <font color="#006400">X</font>
         </h1>
 
-        <button type="button" class="btnbtn-primary"
-        data-toggle="modal" data-target="#exampleModal">Launch demo modal</button>
+        <div class="container mt-4">
+          <ul class="list-group pokemon-list"></ul>
+        </div>
 
-        <div class="modal fade" id="exampleModal"
-        tabindex="-1" role="dialog"
-        aria-labelledby="exampleModallabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title"
-            id="exampleModallabel">Modal title</h5>
-            <button type="button" class="Close"
-            data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span></button>
-          </div>
-          <div class="modal-body"></div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary"
-            data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save Changes</button>
-          </div>
-       
-        <!-- </div> -->
-        <!-- <ul class="pokemon-list"></ul>
-        <div class="modal-1">
-          <button id="show-modal" class="btnbtn-primary"></button>
-          <div id="modal-container" class="modal-container">
-            <div class="modal">
-              <button class="modal-close btnbtn-danger">Close</button> <br />
-              <h2>Welcome!</h2>
-              <div class="loader"></div>
-              <p>Choose your pokémon!</p>
+        <div
+          class="modal fade"
+          id="pokemonModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="pokemonModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="pokemonModalLabel">modal title</h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                  aria-hidden="true"
+                >
+                  &times;
+                </button>
+                <!-- <button type="button" class="Close" data-dismiss="modal" aria-label="Close>"
+       <span aria-hidden="true">&times;</span> -->
+              </div>
+              <div class="modal-body">
+                <img
+                  class="pokemon-image"
+                  src="Url"
+                  alt="Pokemon Image"
+                  style="width: 100%; height: auto"
+                />
+                <p class="pokemon-height"></p>
+                <p class="pokemon-weight"></p>
+                <p class="pokemon-types"></p>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
             </div>
           </div>
-        </div> -->
+        </div>
+
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">bulbasaur</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">ivysaur</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">venusaur</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">charmander</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">charmeleon</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">charizard</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">squirtle</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">wartortle</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">blastoise</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">caterpie</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">metapod</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">butterfree</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">weedle</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">kakuna</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">beedrill</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">pidgey</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">pidgeotto</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">pidgeot</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">rattata</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">raticate</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">spearow</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">fearow</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">ekans</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">arbok</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">pikachu</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">raichu</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">sandshrew</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">sandslash</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">nidoran-f</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">nidorina</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">nidoqueen</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">nidoran-m</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">nidorino</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">nidoking</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">clefairy</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">clefable</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">vulpix</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">ninetales</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">jigglypuff</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">wigglytuff</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">zubat</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">golbat</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">oddish</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">gloom</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">vileplume</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">paras</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">parasect</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">venonat</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">venomoth</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">diglett</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">dugtrio</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">meowth</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">persian</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">psyduck</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">golduck</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">mankey</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">primeape</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">growlithe</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">arcanine</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">poliwag</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">poliwhirl</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">poliwrath</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">abra</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">kadabra</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">alakazam</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">machop</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">machoke</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">machamp</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">bellsprout</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">weepinbell</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">victreebel</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">tentacool</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">tentacruel</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">geodude</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">graveler</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">golem</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">ponyta</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">rapidash</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">slowpoke</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">slowbro</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">magnemite</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">magneton</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">farfetchd</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">doduo</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">dodrio</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">seel</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">dewgong</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">grimer</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">muk</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">shellder</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">cloyster</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">gastly</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">haunter</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">gengar</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">onix</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">drowzee</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">hypno</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">krabby</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">kingler</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">voltorb</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">electrode</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">exeggcute</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">exeggutor</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">cubone</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">marowak</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">hitmonlee</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">hitmonchan</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">lickitung</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">koffing</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">weezing</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">rhyhorn</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">rhydon</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">chansey</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">tangela</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">kangaskhan</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">horsea</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">seadra</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">goldeen</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">seaking</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">staryu</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">starmie</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">mr-mime</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">scyther</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">jynx</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">electabuzz</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">magmar</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">pinsir</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">tauros</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">magikarp</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">gyarados</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">lapras</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">ditto</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">eevee</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">vaporeon</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">jolteon</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">flareon</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">porygon</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">omanyte</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">omastar</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">kabuto</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">kabutops</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">aerodactyl</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">snorlax</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">articuno</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">zapdos</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">moltres</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">dratini</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">dragonair</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">dragonite</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">mewtwo</button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-primary w-100">mew</button>
+        </li>
+
+        <div
+          class="modal fade"
+          id="pokemonModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModallabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModallabel">Modal title</h5>
+                <button
+                  type="button"
+                  class="Close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body"></div>
+
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-primary">
+                  Save Changes
+                </button>
+              </div>
+            </div>
+
+            <script src="jspromise-polyfill.js"></script>
+            <script src="fetch-polyfill.js"></script>
+            <script src="scripts.js"></script>
+            <script
+              src="https://code.jquery.com/jquery-3.3.1.min.js"
+              integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+              crossorigin="anonymous"
+            ></script>
+            <script
+              src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+              integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+              crossorigin="anonymous"
+            ></script>
+            <script
+              src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+              integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+              crossorigin="anonymous"
+            ></script>
+            <script
+              src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+              integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+              crossorigin="anonymous"
+            ></script>
+          </div>
+        </div>
       </main>
-      <script src="jspromise-polyfill.js"></script>
-      <script src="fetch-polyfill.js"></script>
-      <script src="scripts.js"></script>
-      <script
-        src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"
-      ></script>
-      <script
-        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"
-      ></script>
-      <script
-        src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"
-      ></script>
-      <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"
-      ></script>
     </div>
   </body>
 </html>
