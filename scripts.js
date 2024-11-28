@@ -36,7 +36,6 @@ let pokemonRepository = (function () {
         return response.json();
       })
       .then(function (details) {
-        // Add details to the pokemon object
         pokemon.imageUrl = details.sprites.front_default;
         pokemon.height = details.height;
         pokemon.weight = details.weight;
@@ -61,15 +60,17 @@ let pokemonRepository = (function () {
       modalWeight.innerText = `Weight: ${pokemon.weight} lbs`;
       modalTypes.innerText = `Type(s): ${pokemon.types.join(", ")}`;
 
-      // Show the modal
       $("#pokemonModal").modal("show");
     });
   }
 
   function addListItem(pokemon) {
     let pokemonListElement = document.querySelector(".pokemon-list");
-    let listItem = document.createElement("li");
-    listItem.classList.add("list-group-item");
+    let colDiv = document.createElement("div");
+    colDiv.classList.add("col-md-4", "mb-4");
+
+    let card = document.createElement("div");
+    card.classList.add("card");
 
     let button = document.createElement("button");
     button.innerText = pokemon.name;
@@ -78,9 +79,32 @@ let pokemonRepository = (function () {
       showDetails(pokemon);
     });
 
-    listItem.appendChild(button);
-    pokemonListElement.appendChild(listItem);
+    card.appendChild(button);
+    colDiv.appendChild(card);
+    pokemonListElement.appendChild(colDiv);
   }
+
+  function filterPokemon(query) {
+    const filteredPokemon = pokemonList.filter((pokemon) =>
+      pokemon.name.toLowerCase().includes(query.toLowerCase())
+    );
+
+    // Clear the current list
+    let pokemonListElement = document.querySelector(".pokemon-list");
+    pokemonListElement.innerHTML = "";
+
+    // Display the filtered Pokémon
+    filteredPokemon.forEach((pokemon) => addListItem(pokemon));
+  }
+
+  // Event listener for search form submission
+  document
+    .querySelector("#searchForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent the form from submitting
+      let query = document.querySelector("#searchInput").value;
+      filterPokemon(query);
+    });
 
   return {
     add: add,

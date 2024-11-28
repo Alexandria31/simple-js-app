@@ -30,19 +30,21 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Search</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"></a>
+              <form id="searchForm" class="form-inline my-2 my-lg-0">
+                <input
+                  id="searchInput"
+                  class="form-control mr-sm-2"
+                  type="search"
+                  placeholder="Search for Pokémon"
+                  aria-label="Search"
+                />
+                <button
+                  class="btn btn-outline-success my-2 my-sm-0"
+                  type="submit"
+                >
+                  Search
+                </button>
+              </form>
             </li>
           </ul>
         </div>
@@ -50,6 +52,11 @@
 
       <main>
         <h1 class="h1">
+          <img
+            src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
+            alt="Pokémon Logo"
+            style="height: 80px; vertical-align: middle"
+          />
           <font color="#FF2626">P</font>
           <font color="#252A34">O</font>
           <font color="#753422">K</font>
@@ -60,7 +67,7 @@
         </h1>
 
         <div class="container mt-4">
-          <ul class="list-group pokemon-list"></ul>
+          <div class="pokemon-list"></div>
         </div>
 
         <div

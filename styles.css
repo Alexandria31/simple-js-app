@@ -1,72 +1,90 @@
 /* General Body Styles */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: radial-gradient(circle, dodgerblue, yellow);
   color: #333;
-  }
-  
-  /* Top Navigation Styles */
-  .topnav {
-  margin-bottom: 20px;
-  }
-  
-  /* Main Heading Styles */
-  h1 {
-  text-align: center;
-  color: #FF2626;
-  margin-bottom: 20px;
-  }
-  
-  /* Pokémon List Styles */
-  .pokemon-list {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  }
-  
-  /* List Item Styles */
-  .list-group-item {
-  margin-bottom: 10px;
-  }
-  
-  /* Button Styles */
-  .btn {
-  width: 100%; /* Full width for buttons */
-  }
+}
 
-  .btn {
-    width: 100%; /* Full width for buttons */
-    background-color: #28a745; /* Green color */
-    color: white; /* White text color */
-    border: none; /* Remove default border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
-    }
-    
-    .btn:hover {
-    transform: translateY(-2px); /* Slight lift on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
-    }
-    
-    
-  
-  /* Modal Styles */
-  .modal-content {
-  padding: 120px;
-  }
-  
-  .pokemon-image {
+/* Top Navigation Styles */
+.topnav {
+  margin-bottom: 20px;
+}
+
+/* Main Heading Styles */
+h1 {
+  text-align: center;
+  color: #ff2626;
+  margin-bottom: 20px;
+}
+
+.h1 img {
   display: block; /* Center the image */
   margin: 0 auto; /* Center the image */
-  max-width: 100%; /* Responsive image */
+}
+
+/* List Item Styles */
+.list-group-item {
+  margin-bottom: 10px;
+}
+
+/* Button Styles */
+.btn {
+  /* Full width for buttons */
+
+  background-color: #28a745; /* Green color */
+  color: white; /* White text color */
+  border: none; /* Remove default border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.card {
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  align-items: center; /* Center the button vertically */
+  height: 100%; /* Ensure the card has a height to center the button */
+}
+
+/* Pokémon List Styles */
+.pokemon-list {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping to form multiple rows */
+  justify-content: center; /* Center the items horizontally */
+}
+
+/* List Item Styles */
+.col-md-4 {
+  display: flex;
+  justify-content: center; /* Center the column itself */
+  margin-bottom: 20px; /* Space between rows */
+}
+
+.btn:hover {
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Modal Styles */
+.modal-content {
+  text-align: center;
+}
+
+.pokemon-image {
+  display: block; /* Center the image */
+  margin: 0 auto; /* Center the image */
+  max-width: 20%; /* Responsive image */
   height: auto; /* Maintain aspect ratio */
-  }
-  
-  /* Additional Text Styles in Modal */
-  .pokemon-height, .pokemon-weight, .pokemon-types {
+}
+
+/* Additional Text Styles in Modal */
+.pokemon-height,
+.pokemon-weight,
+.pokemon-types {
   margin-top: 10px;
-  font-size: 1.2em; 
-  }
-  
+  font-size: 1.2em;
+}
 
-
+/* Search Input Styles */
+#searchInput {
+  width: 200px; /* Adjust width as needed */
+}
