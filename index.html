@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Simple JS App</title>
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="dist/minifiedstyles.css" />
   </head>
 
   <body>
@@ -67,7 +67,7 @@
         </h1>
 
         <div class="container mt-4">
-          <div class="pokemon-list"></div>
+          <div class="pokemon-list row"></div>
         </div>
 
         <div
@@ -85,7 +85,7 @@
                 <button
                   type="button"
                   class="close"
-                  data-dismiss="modal"
+                  data-bs-dismiss="modal"
                   aria-label="Close"
                   aria-hidden="true"
                 >
@@ -109,7 +109,7 @@
                 <button
                   type="button"
                   class="btn btn-secondary"
-                  data-dismiss="modal"
+                  data-bs-dismiss="modal"
                 >
                   Close
                 </button>
@@ -120,7 +120,7 @@
 
         <script src="jspromise-polyfill.js"></script>
         <script src="fetch-polyfill.js"></script>
-        <script src="dist"></script>
+        <script src="dist/dist.js"></script>
         <script
           src="https://code.jquery.com/jquery-3.3.1.min.js"
           integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -137,8 +137,8 @@
           crossorigin="anonymous"
         ></script>
         <script
-          src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
           crossorigin="anonymous"
         ></script>
       </main>

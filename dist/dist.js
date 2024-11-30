@@ -33,7 +33,7 @@ let pokemonRepository = (function () {
         (o.innerText = `Height: ${e.height} ft`),
         (i.innerText = `Weight: ${e.weight} lbs`),
         (r.innerText = `Type(s): ${e.types.join(", ")}`),
-        $("#pokemonModal").modal("show");
+        new bootstrap.Modal(document.getElementById("pokemonModal")).show();
     });
   }
   function r(e) {
@@ -54,8 +54,8 @@ let pokemonRepository = (function () {
   }
   return (
     document
-      .querySelector("#searchForm")
-      .addEventListener("submit", function (t) {
+      .querySelector("#searchInput")
+      .addEventListener("input", function (t) {
         t.preventDefault();
         !(function t(n) {
           let o = e.filter((e) =>

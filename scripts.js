@@ -60,7 +60,9 @@ let pokemonRepository = (function () {
       modalWeight.innerText = `Weight: ${pokemon.weight} lbs`;
       modalTypes.innerText = `Type(s): ${pokemon.types.join(", ")}`;
 
-      $("#pokemonModal").modal("show");
+      // $("#pokemonModal").modal("show");
+      var modal = new bootstrap.Modal(document.getElementById("pokemonModal"));
+      modal.show();
     });
   }
 
@@ -99,8 +101,8 @@ let pokemonRepository = (function () {
 
   // Event listener for search form submission
   document
-    .querySelector("#searchForm")
-    .addEventListener("submit", function (event) {
+    .querySelector("#searchInput")
+    .addEventListener("input", function (event) {
       event.preventDefault(); // Prevent the form from submitting
       let query = document.querySelector("#searchInput").value;
       filterPokemon(query);
