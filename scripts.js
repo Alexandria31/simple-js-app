@@ -60,7 +60,6 @@ let pokemonRepository = (function () {
       modalWeight.innerText = `Weight: ${pokemon.weight} lbs`;
       modalTypes.innerText = `Type(s): ${pokemon.types.join(", ")}`;
 
-      // $("#pokemonModal").modal("show");
       var modal = new bootstrap.Modal(document.getElementById("pokemonModal"));
       modal.show();
     });
@@ -91,18 +90,24 @@ let pokemonRepository = (function () {
       pokemon.name.toLowerCase().includes(query.toLowerCase())
     );
 
-    // Clear the current list
     let pokemonListElement = document.querySelector(".pokemon-list");
     pokemonListElement.innerHTML = "";
 
-    // Display the filtered Pokémon
     filteredPokemon.forEach((pokemon) => addListItem(pokemon));
   }
 
-  // Event listener for search form submission
+  // Event listener for search input
   document
     .querySelector("#searchInput")
     .addEventListener("input", function (event) {
+      let query = event.target.value;
+      filterPokemon(query);
+    });
+
+  // Event listener for the search form submission
+  document
+    .querySelector("#searchForm")
+    .addEventListener("submit", function (event) {
       event.preventDefault(); // Prevent the form from submitting
       let query = document.querySelector("#searchInput").value;
       filterPokemon(query);

@@ -21,49 +21,53 @@ let pokemonRepository = (function () {
         console.error(e);
       });
   }
-  function i(e) {
+  function r(e) {
     o(e).then(function () {
       let t = document.querySelector("#pokemonModalLabel"),
         n = document.querySelector(".pokemon-image"),
         o = document.querySelector(".pokemon-height"),
-        i = document.querySelector(".pokemon-weight"),
-        r = document.querySelector(".pokemon-types");
+        r = document.querySelector(".pokemon-weight"),
+        i = document.querySelector(".pokemon-types");
       (t.innerText = e.name),
         (n.src = e.imageUrl),
         (o.innerText = `Height: ${e.height} ft`),
-        (i.innerText = `Weight: ${e.weight} lbs`),
-        (r.innerText = `Type(s): ${e.types.join(", ")}`),
+        (r.innerText = `Weight: ${e.weight} lbs`),
+        (i.innerText = `Type(s): ${e.types.join(", ")}`),
         new bootstrap.Modal(document.getElementById("pokemonModal")).show();
     });
   }
-  function r(e) {
+  function i(e) {
     let t = document.querySelector(".pokemon-list"),
       n = document.createElement("div");
     n.classList.add("col-md-4", "mb-4");
     let o = document.createElement("div");
     o.classList.add("card");
-    let r = document.createElement("button");
-    (r.innerText = e.name),
-      r.classList.add("btn", "btn-primary", "w-100"),
-      r.addEventListener("click", function () {
-        i(e);
+    let i = document.createElement("button");
+    (i.innerText = e.name),
+      i.classList.add("btn", "btn-primary", "w-100"),
+      i.addEventListener("click", function () {
+        r(e);
       }),
-      o.appendChild(r),
+      o.appendChild(i),
       n.appendChild(o),
       t.appendChild(n);
+  }
+  function l(t) {
+    let n = e.filter((e) => e.name.toLowerCase().includes(t.toLowerCase()));
+    (document.querySelector(".pokemon-list").innerHTML = ""),
+      n.forEach((e) => i(e));
   }
   return (
     document
       .querySelector("#searchInput")
-      .addEventListener("input", function (t) {
-        t.preventDefault();
-        !(function t(n) {
-          let o = e.filter((e) =>
-            e.name.toLowerCase().includes(n.toLowerCase())
-          );
-          (document.querySelector(".pokemon-list").innerHTML = ""),
-            o.forEach((e) => r(e));
-        })(document.querySelector("#searchInput").value);
+      .addEventListener("input", function (e) {
+        l(e.target.value);
+      }),
+    document
+      .querySelector("#searchForm")
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+        l(document.querySelector("#searchInput").value);
       }),
     {
       add: n,
@@ -83,8 +87,8 @@ let pokemonRepository = (function () {
           });
       },
       loadDetails: o,
-      addListItem: r,
-      showDetails: i,
+      addListItem: i,
+      showDetails: r,
     }
   );
 })();
