@@ -61,6 +61,7 @@ let pokemonRepository = (function () {
     document
       .querySelector("#searchInput")
       .addEventListener("input", function (e) {
+        console.log("Input event triggered with value:", e.target.value);
         l(e.target.value);
       }),
     document

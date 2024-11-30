@@ -100,6 +100,7 @@ let pokemonRepository = (function () {
   document
     .querySelector("#searchInput")
     .addEventListener("input", function (event) {
+      console.log("Input event triggered with value:", event.target.value);
       let query = event.target.value;
       filterPokemon(query);
     });
